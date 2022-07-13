@@ -12,7 +12,7 @@ import { TemaService } from '../service/tema.service';
 export class TemaComponent implements OnInit {
 
   tema: Tema = new Tema()
-  listaTema: Tema[]
+  listaTemas: Tema[]
 
   constructor(
     private temaService: TemaService,
@@ -30,7 +30,7 @@ export class TemaComponent implements OnInit {
 
   findAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Tema[])=>{
-      this.listaTema = resp
+      this.listaTemas = resp
     })
 
   }
