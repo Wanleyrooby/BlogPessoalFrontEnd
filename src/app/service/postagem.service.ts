@@ -25,6 +25,10 @@ export class PostagemService {
     return this.http.get<Postagem>(`http://localhost:8080/postagens/${id}`, this.token)
   }
 
+  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`http://localhost:8080/postagens/titulo/${titulo}`, this.token)
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>('http://localhost:8080/postagens', postagem, this.token)
   }
@@ -36,6 +40,8 @@ export class PostagemService {
   putPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.put<Postagem>('http://localhost:8080/postagens', postagem, this.token)
   }
+
+
 
 
     
