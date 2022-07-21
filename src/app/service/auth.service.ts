@@ -20,7 +20,7 @@ export class AuthService {
   }
 
   atualizar(usuario: Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>('http://localhost:8080/usuarios/atualizar', usuario)
+    return this.http.put<Usuario>('http://localhost:8080/atualizar', usuario)
   }
 
 
